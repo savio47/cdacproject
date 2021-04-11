@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    
+
+    match /products/{itemId}{
+      allow read, write: if
+          request.time < timestamp.date(2021, 4, 23);
+    }
+
+ 
+    match /plans/{itemId}{
+      "$user": {
+                ".write": "!data.exists()"
+            }
+
+
+            
+      allow read: if true;
+      allow create: if request.auth.uid != null && request.resource.data.user is unique;
+      allow update: if request.auth.uid == resource.data.owner;
+      allow delete: if request.auth.uid == resource.data.owner;
+    }
+    match /reviews/{itemId}{
+      allow read: if true;
+      allow create: if request.auth != null && request.resource.data.desc is string;
+      allow update: if request.auth.uid == resource.data.owner;
+      allow delete: if request.auth.uid == resource.data.owner;
+    }
+  }
+}
+
+"plans" :
+{
+                ".write": true,
+                ".validate" : "newData.child(\"user\")exists"
+            }
