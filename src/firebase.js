@@ -3,7 +3,7 @@ import "firebase/auth";
 //import { db } from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAZ2y7_9bBKEMZW2gYkg-R5HM6VZY-ElOk",
+  apiKey: "Enter_your_firebase_key",
   authDomain: "final-project-c1dac.firebaseapp.com",
   projectId: "final-project-c1dac",
   storageBucket: "final-project-c1dac.appspot.com",
