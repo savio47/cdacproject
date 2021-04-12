@@ -2,37 +2,37 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
+    match /products/{productId}{
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if false;
+    }
     
-
-    match /products/{itemId}{
-      allow read, write: if
-          request.time < timestamp.date(2021, 4, 23);
-    }
-
- 
-    match /plans/{itemId}{
-      "$user": {
-                ".write": "!data.exists()"
-            }
-
-
-            
+    match /reviews/{reviewId}{
       allow read: if true;
-      allow create: if request.auth.uid != null && request.resource.data.user is unique;
+      allow create: if request.auth != null 
+      	&& request.resource.data.desc is string
+      	&& request.resource.data.desc.size() >= 2
+        && request.resource.data.desc.size() < 250;
       allow update: if request.auth.uid == resource.data.owner;
       allow delete: if request.auth.uid == resource.data.owner;
     }
-    match /reviews/{itemId}{
+    match /plans/{planId}{ 
       allow read: if true;
-      allow create: if request.auth != null && request.resource.data.desc is string;
-      allow update: if request.auth.uid == resource.data.owner;
-      allow delete: if request.auth.uid == resource.data.owner;
+      allow create: if request.auth.uid != null 
+      	&& request.auth.uid != resource.data.user;
+      allow update: if request.auth.uid == resource.data.user;
+      allow delete: if request.auth.uid == resource.data.user;
+    }
+    match /contacts/{contactId}{
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if false;
     }
   }
 }
 
-"plans" :
-{
-                ".write": true,
-                ".validate" : "newData.child(\"user\")exists"
-            }
+
+    
