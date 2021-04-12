@@ -1,0 +1,17 @@
+[debug] [2021-04-12T05:56:04.754Z] ----------------------------------------------------------------------
+[debug] [2021-04-12T05:56:04.762Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Savio\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-04-12T05:56:04.763Z] CLI Version:   9.6.1
+[debug] [2021-04-12T05:56:04.763Z] Platform:      win32
+[debug] [2021-04-12T05:56:04.764Z] Node Version:  v14.15.1
+[debug] [2021-04-12T05:56:04.767Z] Time:          Mon Apr 12 2021 11:26:04 GMT+0530 (India Standard Time)
+[debug] [2021-04-12T05:56:04.767Z] ----------------------------------------------------------------------
+[debug] [2021-04-12T05:56:04.768Z] 
+[debug] [2021-04-12T05:56:04.795Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-12T05:56:04.797Z] > authorizing via signed-in user
+[debug] [2021-04-12T05:56:04.798Z] [iam] checking project final-project-c1dac for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-04-12T05:56:04.804Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-12T05:56:04.805Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-12T05:56:10.658Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 12 Apr 2021 05:56:09 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-12T05:56:10.730Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/final-project-c1dac:testIamPermissions  
+ {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}

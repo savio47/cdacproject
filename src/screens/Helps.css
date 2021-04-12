@@ -1,0 +1,45 @@
+.helpDisplay {
+  position: cover;
+  color: white;
+  background-color: black;
+  min-height: 620px;
+  min-height: 600px;
+  padding-top: 40px;
+}
+
+.helpDisplay > h1 {
+  color: red;
+  height: 100%;
+  padding-left: 200px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+}
+.inputBox {
+  color: white;
+  background-color: black;
+  height: 40%;
+  padding-left: 200px;
+  padding-right: 100px;
+}
+
+.inputBox > h3 {
+  color: white;
+}
+
+.help {
+  color: black;
+  background-color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.allhelps {
+  background-color: white;
+  color: black;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.allhelps > h3 {
+  padding-left: 60px;
+  padding-right: 50px;
+}
