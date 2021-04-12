@@ -4,8 +4,8 @@ Hosting URL: https://final-project-c1dac.web.app
 
 Project Name: Video Streaming Application (Netflix Clone)
 
-Names of the Project Team Members
-S.No.	Name	  PR No.(Roll No.)
+Names and  PR No. of the Project Team Members
+
 1.	Savio Dias	200950181031
 2.	Kasanuru Mamatha	200950181042
 3.	Nitish Sayam	200950181091
